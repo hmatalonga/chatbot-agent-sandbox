@@ -6,7 +6,7 @@ authors = ["Hugo Matalonga <hello@hmatalonga.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<3.13"
 openai = "^0.28.1"
 streamlit = ">=1.26"
 langchain = "^0.0.306"
