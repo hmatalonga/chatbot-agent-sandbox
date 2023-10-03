@@ -4,7 +4,22 @@
 ## 📦 Apps
 
 1. **💬 Chatbot Basic** - Basic sandbox to interact with GPT3.5 Turbo model
+2. **🔎 Chatbot Search** - A search-enabled chatbot via DuckDuckGo Search Engine
 
+## 🧰 Setup
+
+### Requirements
+- Python 3.10
+
+### Installation
+```shell
+$ poetry install
+```
+
+### Usage
+```shell
+$ poetry run streamlit run chatbot_agent_sandbox/ui/0_🏠_Home.py
+```
 
 ## 🔗 References
 

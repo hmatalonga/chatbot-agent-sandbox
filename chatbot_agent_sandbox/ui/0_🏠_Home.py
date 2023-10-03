@@ -9,6 +9,7 @@ st.set_page_config("Chatbot Agent Sandbox", page_icon="🤖")
 ## 📦 Apps
 
 1. **💬 Chatbot Basic** - Basic sandbox to interact with GPT3.5 Turbo model
+2. **🔎 Chatbot Search** - A search-enabled chatbot via DuckDuckGo Search Engine
 
 
 ## 🔗 References
