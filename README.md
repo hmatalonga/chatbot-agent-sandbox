@@ -28,3 +28,5 @@ $ poetry run streamlit run chatbot_agent_sandbox/ui/0_🏠_Home.py
 
 1. [🎈 Streamlit + LLM Examples App](https://github.com/streamlit/llm-examples)
 2. [🦜️🔗 LangChain 🤝 Streamlit agent examples](https://github.com/langchain-ai/streamlit-agent)
+3. [🚅 LiteLLM](https://docs.litellm.ai/)
+4. [🦙 Ollama](https://ollama.ai/)

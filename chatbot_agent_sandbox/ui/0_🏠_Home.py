@@ -19,4 +19,6 @@ st.set_page_config("Chatbot Agent Sandbox", page_icon="🤖")
 
 1. [🎈 Streamlit + LLM Examples App](https://github.com/streamlit/llm-examples)
 2. [🦜️🔗 LangChain 🤝 Streamlit agent examples](https://github.com/langchain-ai/streamlit-agent)
+3. [🚅 LiteLLM](https://docs.litellm.ai/)
+4. [🦙 Ollama](https://ollama.ai/)
 """
