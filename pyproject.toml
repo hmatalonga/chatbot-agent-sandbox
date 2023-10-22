@@ -12,6 +12,7 @@ streamlit = ">=1.26"
 langchain = "^0.0.306"
 python-dotenv = "^1.0.0"
 duckduckgo-search = "^3.9.1"
+litellm = "^0.11.1"
 
 
 [build-system]

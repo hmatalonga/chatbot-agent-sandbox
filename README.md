@@ -6,6 +6,8 @@
 1. **💬 Chatbot Basic** - Basic sandbox to interact with GPT3.5 Turbo model
 2. **🔎 Chatbot Search** - A search-enabled chatbot via DuckDuckGo Search Engine
 3. **🦜 LangChain: Chat with search** - Search chat with history memory with Langchain
+4. **🤖 Chatbot Basic System** - Basic sandbox to interact with GPT3.5 Turbo using system prompt
+5. **🏺 Chatbot Local Server** - Sandbox running locally via Ollama supports Llama models and other open-source models
 
 ## 🧰 Setup
 
