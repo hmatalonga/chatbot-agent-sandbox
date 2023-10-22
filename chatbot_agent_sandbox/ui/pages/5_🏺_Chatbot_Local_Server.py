@@ -5,6 +5,18 @@ from litellm import completion
 st.set_page_config(page_title="Chatbot Local Server", page_icon="🏺")
 
 with st.sidebar:
+    model_name = st.selectbox(
+        label="Model",
+        options=[
+            "llama2:7b",
+            "llama2:13b",
+            "mistral:instruct",
+            "mistral-openorca",
+            "orca-mini",
+        ],
+        index=2,
+        key="model_name",
+    )
     """
     For additional documentation, visit the following links:
     1. [Ollama](https://ollama.ai/)
@@ -23,7 +35,7 @@ if prompt := st.chat_input():
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
     response = completion(
-        model="ollama/mistral:instruct",
+        model=f"ollama/{model_name}",
         messages=st.session_state.messages,
         api_base="http://localhost:11434",
     )
