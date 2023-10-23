@@ -12,13 +12,25 @@
 ## 🧰 Setup
 
 ### Requirements
+- Python 3.10
 - Docker
+- Poetry (for local development)
+
+### Install
+```shell
+$ cp .env.example .env  # fill in credentials
+```
 
 ### Usage
 
+Via Docker (recommended):
 ```shell
-$ cp .env.example .env  # fill in credentials
 $ docker compose up
+```
+
+If you prefer, to run it locally on the host machine:
+```shell
+$ poetry run streamlit run chatbot_agent_sandbox/ui/0_🏠_Home.py
 ```
 
 ## 🔗 References
