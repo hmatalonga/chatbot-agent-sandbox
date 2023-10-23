@@ -14,4 +14,4 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - OLLAMA_SERVER_URL=${OLLAMA_SERVER_URL}
     ports:
-      - 8501:8501
+      - ${STREAMLIT_PORT}:8501
