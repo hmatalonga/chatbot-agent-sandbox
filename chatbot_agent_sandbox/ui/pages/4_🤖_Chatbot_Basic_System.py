@@ -4,6 +4,10 @@ import streamlit as st
 
 from dotenv import load_dotenv
 
+SYSTEM_PROMPT_DEFAULT = """Act as a search engineer. Your task is to find a more compact and concise Elastic Search Explain JSON output only to show the essential information.
+Remove any unnecessary details and focus on displaying the key factors that contribute to the search score and relevance.
+The Explain response will be in JSON format inside a code block."""
+
 _ = load_dotenv()
 
 st.set_page_config(page_title="Chatbot Basic", page_icon="🤖")
@@ -26,21 +30,29 @@ with st.sidebar:
         key="chatbot_api_key",
         type="password",
     )
+    system_prompt_text = st.text_area(
+        "System Prompt",
+        value=SYSTEM_PROMPT_DEFAULT,
+        key="chatbot_system_prompt_text",
+    )
+    if st.button(
+        "Update",
+        key="chatbot_system_prompt_btn",
+        help="Update system prompt and clear message history.",
+    ):
+        st.session_state["messages"] = [
+            {"role": "system", "content": system_prompt_text},
+        ]
+
     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
 
 st.title("🤖 Chatbot Basic with System")
 
-SYSTEM_PROMPT = """
-Act as a search engineer. Your task is to find a more compact and concise Elastic Search Explain JSON output only to show the essential information.
-Remove any unnecessary details and focus on displaying the key factors that contribute to the search score and relevance.
-The Explain response will be in JSON format inside a code block.
-"""
-
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "system", "content": SYSTEM_PROMPT_DEFAULT},
     ]
 
 for msg in st.session_state.messages:
