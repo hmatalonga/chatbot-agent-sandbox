@@ -1,6 +1,10 @@
+import os
 import streamlit as st
 
 from litellm import completion
+from dotenv import load_dotenv
+
+_ = load_dotenv()
 
 st.set_page_config(page_title="Chatbot Local Server", page_icon="🏺")
 
@@ -37,7 +41,7 @@ if prompt := st.chat_input():
     response = completion(
         model=f"ollama/{model_name}",
         messages=st.session_state.messages,
-        api_base="http://localhost:11434",
+        api_base=os.environ["OLLAMA_SERVER_URL"],
     )
     msg = response.choices[0].message
     st.session_state.messages.append(msg)

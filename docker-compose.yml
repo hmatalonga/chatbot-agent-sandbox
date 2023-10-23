@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  chatbotagentsandbox:
+    image: chatbotagentsandbox
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - DEPLOYMENT_NAME=${DEPLOYMENT_NAME}
+      - OPENAI_API_TYPE=${OPENAI_API_TYPE}
+      - OPENAI_API_VERSION=${OPENAI_API_VERSION}
+      - OPENAI_API_BASE=${OPENAI_API_BASE}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OLLAMA_SERVER_URL=${OLLAMA_SERVER_URL}
+    ports:
+      - 8501:8501

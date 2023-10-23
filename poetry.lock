@@ -598,13 +598,13 @@ typing-inspect = ">=0.4.0,<1"
 
 [[package]]
 name = "duckduckgo-search"
-version = "3.9.1"
+version = "3.9.3"
 description = "Search for words, documents, images, news, maps and text translation using the DuckDuckGo.com search engine."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "duckduckgo_search-3.9.1-py3-none-any.whl", hash = "sha256:c7a42222e806165aabcb11b4230cf662691f576dfd5a3150f2ca59396945359d"},
-    {file = "duckduckgo_search-3.9.1.tar.gz", hash = "sha256:469819430bad5caec56f263736f8f77d78a7aec0555d473941cccf3479507f39"},
+    {file = "duckduckgo_search-3.9.3-py3-none-any.whl", hash = "sha256:4b462333378e9f78e138eccd73a315a54cb5208ebb07ab4ec179d9d18b2998b5"},
+    {file = "duckduckgo_search-3.9.3.tar.gz", hash = "sha256:f68aca605827df4e6b5b4ab00f9a891e103ec30809de092af42e885a617ab5ba"},
 ]
 
 [package.dependencies]
@@ -612,6 +612,9 @@ aiofiles = ">=23.2.1"
 click = ">=8.1.7"
 httpx = {version = ">=0.25.0", extras = ["brotli", "http2", "socks"]}
 lxml = ">=4.9.3"
+
+[package.extras]
+dev = ["black (>=23.9.1)", "isort (>=5.12.0)", "pytest (>=7.4.2)", "pytest-asyncio (>=0.21.1)", "ruff (>=0.0.291)"]
 
 [[package]]
 name = "exceptiongroup"
@@ -2975,4 +2978,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "7d341f18f4591595edc4b89867eacd9dc5f46e9ff97575f30b551f91642b4111"
+content-hash = "7e33999d511824ed03613c16165d6ee86b788541d9fcf841d2040809758beed8"
