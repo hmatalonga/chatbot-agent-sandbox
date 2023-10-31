@@ -59,3 +59,4 @@ $ poetry run python chatbot_agent_sandbox/agents/simple_agent.py
 2. [🦜️🔗 LangChain 🤝 Streamlit agent examples](https://github.com/langchain-ai/streamlit-agent)
 3. [🚅 LiteLLM](https://docs.litellm.ai/)
 4. [🦙 Ollama](https://ollama.ai/)
+5. [🥁 AutoGen](https://microsoft.github.io/autogen/)
