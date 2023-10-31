@@ -21,7 +21,9 @@
 $ cp .env.example .env  # fill in credentials
 ```
 
-### Usage
+## 💡 Usage
+
+### Streamlit Pages
 
 Via Docker (recommended):
 ```shell
@@ -31,6 +33,24 @@ $ docker compose up
 If you prefer, to run it locally on the host machine:
 ```shell
 $ poetry run streamlit run chatbot_agent_sandbox/ui/0_🏠_Home.py
+```
+
+### Agents
+
+Start Ollama model server:
+```shell
+$ docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama-cpu ollama/ollama  # CPU only
+$ docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama-gpu ollama/ollama  # GPU
+```
+
+Deploy Openai compatible proxy-server:
+```shell
+$ poetry run python -m flask --app chatbot_agent_sandbox/proxy_server.py run -p 4000
+```
+
+Run agent code:
+```shell
+$ poetry run python chatbot_agent_sandbox/agents/simple_agent.py
 ```
 
 ## 🔗 References

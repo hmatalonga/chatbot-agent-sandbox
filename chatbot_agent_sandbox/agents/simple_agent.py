@@ -1,4 +1,3 @@
-import os
 from dotenv import load_dotenv
 from autogen import AssistantAgent, UserProxyAgent
 
@@ -12,9 +11,9 @@ assistant = AssistantAgent(
         "seed": 42,
         "config_list": [
             {
-                # "api_type": "open_ai",
+                "api_type": "open_ai",
                 "api_key": "NULL",  # just a placeholder
-                "api_base": "http://localhost:4000"
+                "api_base": "http://localhost:4000",
             }
         ],
         "temperature": 0,
