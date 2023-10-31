@@ -13,12 +13,11 @@ with st.sidebar:
         label="Model",
         options=[
             "llama2:7b",
-            "llama2:13b",
-            "mistral:instruct",
+            "mistral",
             "mistral-openorca",
-            "orca-mini",
+            "zephyr",
         ],
-        index=2,
+        index=3,
         key="model_name",
     )
     """
